@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+.btn {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 8px 24px;
+    border-radius: 3px;
+    font-size: 14px;
+    text-decoration: none;
+    box-shadow: 0 4px 11px 0 rgb(37 44 97 / 15%), 0 1px 3px 0 rgb(93 100 148 / 20%);
+    transition: all .2s ease-out;
+
+    &.btn-green {
+        color: rgb(236, 240, 9);
+        background-color: #2c6e30;
+        &:hover {
+            background-color: #024b08;
+        }
+    }
+
+    &.btn-blue {
+        background-color: #0070f3;
+        color: white;
+        &:hover {
+            background-color: #0056b8;
+        }
+        &:disabled {
+            opacity: 0.5;
+        }
+    }
+
+    &.btn-red { 
+        background: #cc4d29;
+        color: white;
+        &:hover {
+            background: #e4461b;
+        }
+    }
+
+    &.btn-orange { 
+        background: #eb9b24;
+        color: white;
+        &:hover {
+            background: #d47f00;
+        }
+    }
+
+}

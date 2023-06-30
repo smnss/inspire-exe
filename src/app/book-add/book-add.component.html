@@ -1,0 +1,21 @@
+<div class="popup-container" >
+<div class="form-popup">
+  <form class="form-container" [formGroup]="createBookForm">
+    <label for="imageUrl"><b>imageUrl</b></label>
+    <input type="text" placeholder="Enter imageUrl" name="imageUrl" required formControlName="imageUrl">
+
+    <label for="title"><b>title</b></label>
+    <input type="text" placeholder="Enter title" name="title" required formControlName="title">
+
+    <label for="purchaseLink"><b>purchaseLink</b></label>
+    <input type="text" placeholder="Enter purchaseLink" name="purchaseLink" required formControlName="purchaseLink">
+
+    <label for="publishDate"><b>publishDate</b></label>
+    <input type="number" placeholder="Enter publishDate" name="PublishDate" required formControlName="PublishDate">
+    <div>
+      <button type="submit" class="btn btn-blue" (click)="addBook()" [disabled]="createBookForm.invalid">{{book ? 'Update': 'Create'}}</button> &nbsp;
+      <button type="button" class="btn btn-orange" (click)="closeForm()">Cancel</button>
+    </div>
+  </form>
+</div>
+</div>

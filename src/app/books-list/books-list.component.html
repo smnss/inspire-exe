@@ -1,0 +1,41 @@
+<div class="top-container">
+  <div class="top-info">
+    <h2>Book List</h2>
+    <div>
+      <h3>{{author?.author}}</h3>
+      <div>{{author?.birthday}}</div>
+      <div>{{author?.birthPlace}}</div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="left-container">
+    <div class="cards">
+      <div class="card" *ngFor="let item of author?.books; let index = index">
+        <img [src]="item?.imageUrl" class="card-img-top img-fluid" alt="...">
+        <div class="card-body">
+          <div class="book-details">
+            <div class="card-title">{{item?.title}}</div>
+            <div class="card-text">Published: {{item?.PublishDate}}</div>
+            <a [href]="item?.purchaseLink" target="_blank" class="btn btn-green">Buy</a>
+          </div>
+          <div class="action-btns">
+            <button class="btn btn-red" (click)="deleteBook(index)">Del</button>
+            <span>&nbsp;</span>
+            <button class="btn btn-orange" (click)="editBook(item, index)">Edit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="loading" *ngIf="!author?.books">
+      Loading....
+    </div>
+
+    <div class="add-book">
+      <button class="btn btn-blue" (click)="addBook()">Add New Book</button>
+    </div>
+  </div>
+  <app-book-add *ngIf="popupVisibility" [selectedBook]="selectedBook!" (bookUpdate)="updateBookList($event)"
+    (popupView)="decidePopupView($event)"></app-book-add>
+</div>

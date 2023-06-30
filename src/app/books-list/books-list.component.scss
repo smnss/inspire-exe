@@ -1,0 +1,76 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgb(177, 177, 177);
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: aliceblue;
+
+  >.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    text-align: right;
+    .book-details *{
+        margin-bottom: 10px;
+      
+    }
+    .action-btns {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    .card-text {
+      font-style: italic;
+      color: rgb(85, 85, 85);
+    }
+  }
+}
+
+.cards {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.card-img-top {
+  height: 150px;
+}
+
+.add-book {
+  text-align: center;
+  margin: 20px auto;
+}
+.top-container {
+  background-color: rgb(135, 222, 196);
+  margin-bottom: 15px;
+  color:rgb(75, 75, 75);
+  .top-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin: auto;
+    width: 70%;
+    > div {
+      font-size: 15px;
+      color: indianred;
+      div {
+        font-style: italic;
+        color: darkslategrey;
+      }
+    }
+  }
+}
+
+
+.loading {
+  padding:50px;
+  text-align: center;
+  color: brown;
+  font-size: 24px;
+}
